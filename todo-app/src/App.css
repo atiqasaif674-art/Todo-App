@@ -1,0 +1,264 @@
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 60px 20px;
+}
+.todo-card {
+  width: 100%;
+  max-width: 620px;
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 22px;
+  box-shadow: 0 15px 45px rgba(30, 30, 60, 0.09);
+}
+.app-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.app-icon {
+  width: 58px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+  border-radius: 18px;
+  background: #5b5ce2;
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+}
+.app-header h1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: #24243a;
+}
+.app-header p {
+  color: #88889b;
+  font-size: 14px;
+}
+.todo-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.todo-form input {
+  flex: 1;
+  min-width: 0;
+  padding: 14px;
+  border: 1px solid #e3e3ee;
+  border-radius: 10px;
+  background: #fafaff;
+  outline: none;
+}
+.todo-form input:focus {
+  border-color: #5b5ce2;
+}
+.add-btn {
+  padding: 0 20px;
+  border: none;
+  border-radius: 10px;
+  background: #5b5ce2;
+  color: white;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+.add-btn:hover {
+  background: #4445c7;
+}
+.todo-stats {
+  display: flex;
+  justify-content: space-between;
+  color: #88889b;
+  font-size: 13px;
+  margin: 20px 0;
+}
+.filter-buttons {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #eeeeF5;
+}
+.filter-btn {
+  border: none;
+  background: #f4f4fa;
+  color: #77778a;
+  padding: 9px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  transition: 0.2s;
+}
+.filter-btn:hover {
+  background: #e8e8fb;
+}
+.filter-btn.selected {
+  background: #5b5ce2;
+  color: white;
+}
+.todo-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px;
+  border: 1px solid #ededf5;
+  border-radius: 12px;
+  background: #ffffff;
+  transition: background 0.2s;
+}
+.todo-item:hover {
+  background: #fafaff;
+}
+.todo-item > input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #5b5ce2;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+.todo-text {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.todo-item.completed .todo-text {
+  text-decoration: line-through;
+  color: #aaaabb;
+}
+.todo-actions {
+  display: flex;
+  gap: 6px;
+}
+.edit-btn,.delete-btn {
+  border: none;
+  background: #f4f4fa;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+.edit-btn:hover {
+  background: #e7e7ff;
+}
+.delete-btn:hover {
+  background: #ffe8e8;
+}
+.edit-form {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.edit-input {
+  width: 100%;
+  min-width: 0;
+  padding: 9px;
+  border: 1px solid #c8c8f7;
+  border-radius: 7px;
+}
+.save-btn,.cancel-btn {
+  border: none;
+  padding: 9px;
+  border-radius: 7px;
+  font-size: 12px;
+}
+.save-btn {
+  background: #5b5ce2;
+  color: white;
+}
+.cancel-btn {
+  background: #eeeeF5;
+  color: #55556b;
+}
+.empty-state {
+  text-align: center;
+  padding: 35px 10px;
+  color: #88889b;
+}
+.empty-icon {
+  font-size: 38px;
+  margin-bottom: 12px;
+}
+.empty-state h3 {
+  font-size: 18px;
+  color: #44445b;
+  margin-bottom: 8px;
+}
+.empty-state p {
+  font-size: 13px;
+}
+.clear-btn {
+  display: block;
+  margin: 22px auto 0;
+  padding: 10px 16px;
+  border: 1px solid #ffd6d6;
+  border-radius: 8px;
+  background: #fff5f5;
+  color: #d94848;
+  font-size: 13px;
+}
+.clear-btn:hover {
+  background: #ffe8e8;
+}
+.app-footer {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #eeeeF5;
+  color: #aaaabb;
+  font-size: 12px;
+}
+@media (max-width: 480px) {
+  .app-container {
+    padding: 20px 12px;
+  }
+  .todo-card {
+    padding: 22px 16px;
+    border-radius: 16px;
+  }
+  .app-header h1 {
+    font-size: 25px;
+  }
+  .todo-form {
+    gap: 7px;
+  }
+  .todo-form input {
+    padding: 12px 10px;
+    font-size: 13px;
+  }
+  .add-btn {
+    padding: 0 13px;
+    font-size: 13px;
+  }
+  .filter-buttons {
+    gap: 6px;
+  }
+  .filter-btn {
+    padding: 9px 12px;
+  }
+  .todo-item {
+    padding: 11px 9px;
+    gap: 8px;
+  }
+  .todo-actions {
+    gap: 4px;
+  }
+  .edit-btn,.delete-btn {
+    width: 30px;
+    height: 30px;
+  }
+  .edit-form {
+    flex-wrap: wrap;
+  }
+}
